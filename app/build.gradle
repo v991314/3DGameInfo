@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "com.gavin.your3dmgame"
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+            //'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    /*ndk {
+        //选择要添加的对应cpu类型的.so库。
+        abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        // 还可以添加'x86', 'x86_64', 'mips', 'mips64'
+    }*/
+//
+//    manifestPlaceholders = [
+//            JPUSH_PKGNAME: applicationId,
+//            JPUSH_APPKEY : "30f551cba50050e690fbdd2c", //JPush上注册的包名对应的appkey.
+//            JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+//    ]
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.lzy.net:okhttputils:1.8.1'
+    //可以单独使用，不需要依赖下方的扩展包
+    compile 'com.lzy.net:okhttpserver:1.0.3'
+    compile 'com.alibaba:fastjson:1.2.17'
+    compile 'com.alibaba:fastjson:1.1.54.android'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile 'com.facebook.fresco:fresco:0.14.1'
+    compile 'com.github.jdsjlzx:LRecyclerView:1.2.4'
+    compile 'com.github.castorflex.smoothprogressbar:library:1.1.0'
+    compile 'com.classic.common:multiple-status-view:1.2'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.1.5
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/jpush-android-2.1.9.jar')
+    compile files('libs/tbs_sdk_thirdapp_v2.4.0.1073_36840_sharewithdownload_obfs_20161011_194834.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+}

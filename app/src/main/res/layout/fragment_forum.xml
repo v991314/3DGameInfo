@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<ImageButton
+        android:id="@+id/main_action_menu"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_trans_divider"
+        android:clickable="true"
+        android:src="@drawable/ic_action_menu"/>-->
+    <!-- title区域 -->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#EB413D">
+
+
+
+        <TextView
+            android:id="@+id/chapter_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="论坛"
+            android:layout_gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </android.support.v7.widget.Toolbar>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+    <com.tencent.smtt.sdk.WebView
+        style="@style/WebView"
+        android:id="@+id/forum_WebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        />
+</LinearLayout>

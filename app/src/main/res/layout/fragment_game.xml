@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.gavin.your3dmgame.fragments.gameFragment">
+
+
+   <!-- <ImageButton
+        android:id="@+id/main_action_menu"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_trans_divider"
+        android:clickable="true"
+        android:src="@drawable/ic_action_menu"/>-->
+    <!-- title区域 -->
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#EB413D">
+
+
+
+
+        <TextView
+            android:id="@+id/chapter_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="游戏"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="游戏类型："
+            android:textSize="15sp"/>
+
+        <Spinner
+            android:id="@+id/game_Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext1"
+            android:spinnerMode="dialog"></Spinner>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/darker_gray"></View>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+            android:padding="10dp"
+            android:id="@+id/game_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_view"
+        android:visibility="gone"/>
+
+</LinearLayout>

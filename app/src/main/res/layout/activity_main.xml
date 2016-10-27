@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    tools:context="com.gavin.your3dmgame.MainActivity">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mRadioGroup">
+
+    </android.support.v4.view.ViewPager>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mRadioGroup"
+            android:background="@color/divider"
+            android:paddingTop="0.4dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:text="文章"
+                android:drawableTop="@drawable/biz_navigation_tab_news"
+                style="@style/radiButtonStyle"/>
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:text="论坛"
+                android:drawableTop="@drawable/biz_navigation_tab_topic"
+                style="@style/radiButtonStyle"/>
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:text="游戏"
+                android:drawableTop="@drawable/biz_navigation_tab_read"
+                style="@style/radiButtonStyle"
+                />
+
+        </RadioGroup>
+
+</RelativeLayout>

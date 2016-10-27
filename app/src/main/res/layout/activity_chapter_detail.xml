@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chapter_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    tools:context="com.gavin.your3dmgame.activity.ChapterDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mToolbar"
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#EB413D"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageButton
+                android:id="@+id/article_share"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="15dp"
+                android:background="@null"
+                android:src="@drawable/abc_ic_menu_share_mtrl_alpha"/>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/mNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/web_progress"
+                android:layout_width="match_parent"
+                android:indeterminate="true"
+                app:spb_sections_count="3"
+                app:spb_color="#05b2fc"
+                app:spb_speed="2.0"
+                app:spb_stroke_width="4dp"
+                app:spb_stroke_separator_length="4dp"
+                app:spb_reversed="false"
+                app:spb_mirror_mode="false"
+                app:spb_progressiveStart_activated="true"
+                app:spb_progressiveStart_speed="1.5"
+                app:spb_progressiveStop_speed="3.4"
+                android:layout_height="2dp" />
+            <com.tencent.smtt.sdk.WebView
+                android:id="@+id/chapter_Detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </com.tencent.smtt.sdk.WebView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/note_publish_img_pressed"
+        app:layout_behavior="com.gavin.your3dmgame.entity.MyBehavior"
+        app:backgroundTint="#D71403"
+        app:rippleColor="@android:color/background_light"
+        android:layout_margin="20dp"
+        app:fabSize="normal"
+        app:layout_anchor="@id/mNestedScrollView"
+        app:layout_anchorGravity="bottom|right"
+        />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="text_normal">#AAAAAA</color>
+    <color name="text_checked">#EB413D</color>
+    <color name="background_normal">#fff</color>
+    <color name="background_checked">#fff</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF7F00</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="cyan_qing">#00FFFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="purple_zi">#7F00FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="divider">#20000000</color>
+    <color name="FloatingActionButton">#EB413D</color>
+</resources>

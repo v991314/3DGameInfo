@@ -1,0 +1,61 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+
+                                                 tools:context="com.gavin.your3dmgame.fragments.chapterFragment">
+   <!-- <ImageButton
+        android:id="@+id/main_action_menu"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/selector_trans_divider"
+        android:clickable="true"
+        android:src="@drawable/ic_action_menu"/>-->
+    <!-- title区域 -->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#EB413D"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/chapter_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="首页"
+                android:textColor="#fff"
+                android:textSize="20sp"/>
+        </android.support.v7.widget.Toolbar>
+        <android.support.design.widget.TabLayout
+            android:id="@+id/mTabLayout_chapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/white"
+            app:tabIndicatorColor="#EB413D"
+            app:tabMinWidth="50dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="#eb633d"
+            app:tabTextColor="#AAAAAA"
+            >
+        </android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager_chapter"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v4.view.ViewPager>
+
+
+</android.support.design.widget.CoordinatorLayout>

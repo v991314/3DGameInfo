@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.gavin.your3dmgame.fragments.inner_fragments.chapter_normal">
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/chapter_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <include
+        android:id="@+id/empty_view"
+        layout="@layout/empty_view"
+        android:visibility="gone"/>
+
+</FrameLayout>

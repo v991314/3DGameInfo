@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_comment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    tools:context="com.gavin.your3dmgame.activity.CommentActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/text_checked">
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/comment_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mCommentsLayout"
+        android:layout_below="@+id/toolbar"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/mCommentsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#edecec"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/ed_comment"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg"
+            android:drawableLeft="@drawable/night_biz_tie_comment_reply_write"
+            android:hint="尽情吐槽吧~~~"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/comment_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="16sp"
+            android:background="@drawable/btn_commit"
+            android:text="评论"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</RelativeLayout>
