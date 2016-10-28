@@ -8,7 +8,8 @@
 1. 使用了的Material Design的一些控件：CoordinatorLayout,AppBarLayout+Toolbar,NestedScrollView,FloatingActionButton,RecyleView以及Cardview的综合使用。
 2. 整体模块的框架采用了Frgment+FragmentTablayout+ViewPager。通过缓存视图解决了Frgment重复加载数据。
 3. 通过判断Frgment是否显示，来实现Fragment数据的懒加载，可以解决流量消耗问题。
-4. 集成了一些常用的第三方技术：bugly，极光推送，shareSDK分享，TBS Webview，
+4. 集成了一些常用的第三方技术：bugly bug统计，极光推送，shareSDK分享，友盟统计，TBS Webview，
+
 ### 主要使用的第三方开源框架有： 
 - butterknife 一键注解，一个非常好用的工具
 - okhttpUtils 网络加载框架
